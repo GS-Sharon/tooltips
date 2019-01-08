@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Отдельный файл стилей дял блока алертов -->
+  <!-- <link rel="stylesheet" href="css/hullabaloo.css"> -->
+
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap-4.0.0.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Welcom Hullabaloo.js</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="row content">
+      <div class="col-md-6">
+        <h3>使用：</h3>
+        <ul>
+          <li>可控制在center、left、right出现</li>
+          <li>有Success、Info、Warning、Danger、Light、Dark六种状态可控</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3>例子:</h3>
+        <button class="btn btn-success m-2" onclick="$.hulla.send('Все прошло удачно', 'success')">Success</button>
+        <button class="btn btn-info m-2" onclick="$.hulla.send('Информационное сообщение', 'info')">Info</button>
+        <button class="btn btn-warning m-2" onclick="$.hulla.send('Внимание!', 'warning')">Warning</button>
+        <button class="btn btn-danger m-2" onclick="$.hulla.send('Произошла ошибка', 'danger')">Danger</button>
+        <button class="btn btn-light m-2" onclick="$.hulla.send('Светлый стиль сообщения', 'light')">Light</button>
+        <button class="btn btn-dark m-2" onclick="$.hulla.send('Темный стиль сообщения', 'dark')">Dark</button>
+        <br/><br/>
+
+      </div>
+    </div>
+
+
+  </div>
+  <!-- /container -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap-4.0.0.min.js"></script>
+  <script src="js/hullabaloo.js"></script>
+
+  <script type="text/javascript">
+    $.hulla = new hullabaloo();
+
+    setTimeout(function() {
+      $.hulla.send("成功操作类", "success");
+    }, 1000);
+
+    setTimeout(function() {
+      $.hulla.send("通知类", "info");
+    }, 3000);
+
+    setTimeout(function() {
+      $.hulla.send("警告类", "warning");
+    }, 4000);
+
+    setTimeout(function() {
+      $.hulla.send("通知类", "info");
+    }, 3000);
+    setTimeout(function() {
+      $.hulla.send("通知类", "info");
+    }, 3000);
+  </script>
+</body>
+
+</html>
